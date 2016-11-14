@@ -26,6 +26,9 @@ class GameController < ApplicationController
       @score = @attempt.length*100 / @duration.round
       @message = "Well done"
     end
+    session[:number] = session[:number].to_i + 1
+    session[:score_tot] = session[:score_tot].to_i + @score
+    session[:average] = session[:score_tot] / session[:number]
   end
 
   def translate(word)

@@ -6,4 +6,8 @@
 <% end %>
 
 <h3>Duration of the game : <%= @duration.round(2) %> s</h3>
+
+<p>Number of games : <%= session[:number] %></p>
+<p>Average score : <%= session[:average] %></p>
+
 <%= link_to 'Play again', game_path %>
