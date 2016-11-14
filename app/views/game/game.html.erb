@@ -1,0 +1,12 @@
+<h1>Welcome to the game</h1>
+
+<p>Here are the letters : <%= @grid.join(", ") %></p>
+
+<% @start_time = Time.now %>
+
+<form action="/score" method="get">
+  <input type="text" name="attempt" placeholder="Your word">
+  <input type="submit">
+  <input type="hidden" name="grid" value="<%= @grid.join("") %>" >
+  <input type="hidden" name= "start_time" value="<%= @start_time %>">
+</form>

@@ -1,0 +1,9 @@
+<h1>Your score : <%= @score %> points!</h1>
+<h2><%= @message %></h2>
+
+<% if !@translation.nil? %>
+  <h3>Translation : <%= @translation %></h3>
+<% end %>
+
+<h3>Duration of the game : <%= @duration.round(2) %> s</h3>
+<%= link_to 'Play again', game_path %>
